@@ -1,27 +1,38 @@
-var SpeechRecognition=window.webkitSpeechRecognition;
-var recognition=new SpeechRecognition();
-function start(){
-    document.getElementById("textbox").innerHTML="";
-    recognition.start();
-}
-recognition.onresult=function run(event){
-    console.log(event);
-    var content=event.results[0][0].transcript;
-    console.log(content);
-    document.getElementById("textbox").innerHTML=content;
-    speak();
-}
-function speak(){
-    var synth=window.speechSynthesis;
-    var speak_data=document.getElementById("textbox").value;
-    var utterThis=new SpeechSynthesisUtterance(speak_data);
-    synth.speak(utterThis);
-    Webcam.attach(camera);
-}
-Webcam.set({
-    width:320,
-    height:240,
-    image_format:'png',
-    png_quality:90
-});
-camera=document.getElementById("camera");
+canvas=document.getElementById("myCanvas");
+ctx=canvas.getContext("2d");
+color="green";
+ctx.beginPath();
+ctx.strokeStyle=color;
+ctx.lineWidth=2;
+ctx.rect(150,143,430,200);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="blue";
+ctx.lineWidth=5;
+ctx.arc(250,210,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="black";
+ctx.lineWidth=5;
+ctx.arc(350,210,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="red";
+ctx.lineWidth=5;
+ctx.arc(450,210,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="yellow";
+ctx.lineWidth=5;
+ctx.arc(300,250,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="green";
+ctx.lineWidth=5;
+ctx.arc(400,250,40,0,2*Math.PI);
+ctx.stroke();
