@@ -1,17 +1,19 @@
-
-h1
+#start-btn
 {
-	color: red; 
-	font-size: 40px;
+    width: 40%;
+} 
+#camera
+{
+    width:360px;
+    height: 250px;
+    border:1px solid grey;
 }
-.body_backgorund {
-	background-image: url("bg1.jpg");
-	background-position: center;
-	background-size: cover;
+#logo_img
+{
+    width: 150px;
+    border-radius: 100px;
 }
-
-#myCanvas{
-border-width:10px;
-background-color: white;
-border-style: ridge;
+#textbox
+{
+    width: 300px;
 }
